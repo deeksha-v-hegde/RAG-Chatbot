@@ -359,33 +359,27 @@ To ensure the Mutual Fund FAQ Assistant always operates on current regulatory fi
 
 ```mermaid
 flowchart LR
-    Cron["GitHub Actions Cron Schedule (Daily 02:00 UTC)"] --> Runner["Ephemeral Ubuntu Runner"]
-    Manual["Manual Dispatch (workflow_dispatch)"] --> Runner
-    
-    subgraph Ingestion_Job ["Automated Execution"]
-        Runner --> Fetch["Phase 1: Force-Refresh Scraper (phase1/run_ingestion.py)"]
-        Fetch --> Parse["Extract & Normalize Official Groww Disclosures"]
-        Parse --> Index["Phase 2: Rebuild Vector Index (phase2/run_phase2.py)"]
-        Index --> Tests["Run Integrity Smoke Tests (Registry, Indexer, Retriever)"]
-    end
-
-    subgraph Sync_Job ["Version Control & Deployment Sync"]
-        Tests --> Diff{"Diff Detected in data/ ?"}
-        Diff -- "Yes" --> Commit["Commit & Push to origin/main [skip ci]"]
-        Diff -- "No" --> Done["No-op: Corpus Already Fresh"]
-        Commit --> StreamlitCloud["Streamlit Community Cloud Auto-Redeploy"]
-    end
+    Cron["GitHub Actions Cron Schedule (Daily 04:30 UTC / 10:00 AM IST)"] --> Runner["Ephemeral Ubuntu Runner"]
+    Dispatch["Manual Trigger (workflow_dispatch)"] --> Runner
+    Runner --> Ingest["Step 1: Phase 1 Ingestion Pipeline (--force-refresh)"]
+    Ingest --> BuildIdx["Step 2: Phase 2 Indexing Pipeline (--build-index)"]
+    BuildIdx --> Tests["Step 3: Verification Smoke Tests (Registry, Indexer, Retriever)"]
+    Tests --> DiffCheck{"Step 4: Changes Detected in data/?"}
+    DiffCheck -- "Yes" --> GitCommit["Step 5: Git Commit & Push to main ([skip ci])"]
+    DiffCheck -- "No" --> Done["Step 5: Exit cleanly (Corpus Fresh)"]
+    GitCommit --> Repo[("GitHub Repository (main)")]
 ```
 
-### Key Workflow Capabilities:
-1. **Deterministic Daily Schedule**:
-   - Executes automatically via `schedule.cron: '0 2 * * *'` (02:00 UTC / 07:30 AM IST), ensuring the corpus is refreshed before morning trading hours.
-2. **On-Demand Manual Trigger**:
+### Operational Characteristics:
+1. **Zero-Server Overhead**: The scraping and re-indexing tasks execute on GitHub-hosted ephemeral Ubuntu runners. There is zero hosting or VM cost for scheduling.
+2. **Deterministic Schedule**:
+   - Executes automatically via `schedule.cron: '30 4 * * *'` (04:30 UTC / 10:00 AM IST), ensuring the corpus is refreshed daily.
+3. **On-Demand Manual Trigger**:
    - Supports `workflow_dispatch` for instant administrative data syncs when AMCs announce statutory scheme changes or KIM/SID revisions.
-3. **Automated Diff Detection & Safe Commit**:
+4. **Automated Diff Detection & Safe Commit**:
    - Evaluates `git status -s data/` after scraping and re-indexing.
    - If official disclosures have changed, the action automatically commits updated atomic chunks (`data/index/chunks.json`) and vector files (`data/index/tfidf_matrix.npy`, `data/index/vectorizer.pkl`) with a `[skip ci]` tag.
-4. **Seamless Continuous Deployment (CD)**:
+5. **Seamless Continuous Deployment (CD)**:
    - Pushing the updated `data/index/` and processed documents to `origin/main` automatically triggers a zero-downtime hot-reload on Streamlit Community Cloud, keeping production answers synchronized with verified disclosures.
 
 ---
