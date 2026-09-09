@@ -1,6 +1,6 @@
 # 📈 Groww Mutual Fund RAG Assistant
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ragchatbotmutualfunds.streamlit.app/)
 [![Scheduled Data Freshness](https://github.com/deeksha-v-hegde/RAG-Chatbot/actions/workflows/data_freshness.yml/badge.svg)](https://github.com/deeksha-v-hegde/RAG-Chatbot/actions/workflows/data_freshness.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -11,7 +11,7 @@ An enterprise-grade, compliance-aware Retrieval-Augmented Generation (RAG) assis
 
 ## 🚀 Live Demo
 
-**Deployed App URL**: [Click here to launch the Mutual Fund FAQ Assistant](https://share.streamlit.io) *(Replace with your deployed Streamlit link)*
+**Deployed App URL**: [https://ragchatbotmutualfunds.streamlit.app/](https://ragchatbotmutualfunds.streamlit.app/)
 
 ---
 
