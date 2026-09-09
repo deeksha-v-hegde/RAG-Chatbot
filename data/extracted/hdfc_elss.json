@@ -1,0 +1,30 @@
+{
+  "scheme_id": "hdfc_elss",
+  "scheme_name": "HDFC ELSS Tax Saver Fund Direct Plan Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+  "category": "Equity",
+  "sub_category": "ELSS",
+  "plan_type": "Direct",
+  "expense_ratio": "1.19%",
+  "expense_ratio_val": 1.19,
+  "exit_load": "Nil",
+  "min_sip": "₹500",
+  "min_sip_val": 500,
+  "min_lumpsum": "₹500",
+  "min_lumpsum_val": 500,
+  "riskometer": "Moderately High",
+  "benchmark": "NIFTY 500 Total Return Index",
+  "lock_in": "3 Years statutory lock-in",
+  "lock_in_years": 3,
+  "fund_managers": "Vinay Kulkarni",
+  "launch_date": "01-Jan-2013",
+  "tax_implications": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+  "fund_description": "The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments.",
+  "stamp_duty": "0.005% (from July 1st, 2020)%",
+  "last_updated": "2026-09-09",
+  "raw_sections": {
+    "allotment_date": "2013-01-01",
+    "aum": 16095.4454,
+    "isin": "INF179K01YS4"
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grow RAG | Professional Finance Assistant</title>
+  <meta name="description" content="Grow RAG: Facts-only mutual fund assistant for designated HDFC schemes. Powered by Groq and official Groww scheme disclosures.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="brand-title">Grow RAG</h1>
+        <p class="brand-subtitle">Professional Finance Assistant</p>
+        <button class="clear-chat-btn" id="clearChatBtn">
+          <span>+</span> Clear chat
+        </button>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <div class="nav-item active" id="navHome">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </div>
+        <div class="nav-item" id="navFaq">
+          <span class="nav-icon">📄</span>
+          <span>Investment FAQ</span>
+        </div>
+        <div class="nav-item" id="navTrends">
+          <span class="nav-icon">📈</span>
+          <span>Market Trends</span>
+        </div>
+        <div class="nav-item" id="navHistory">
+          <span class="nav-icon">🕒</span>
+          <span>Historical Data</span>
+        </div>
+      </nav>
+
+      <!-- Example Questions Section -->
+      <div class="example-section">
+        <div class="example-header">EXAMPLE QUESTIONS</div>
+        <div class="example-cards">
+          <button class="example-card" data-query="What is the expense ratio of HDFC Mid Cap Fund?">
+            "What is the expense ratio of HDFC Mid Cap Fund?"
+          </button>
+          <button class="example-card" data-query="What is the exit load of HDFC Equity Fund?">
+            "What is the exit load of HDFC Equity Fund?"
+          </button>
+          <button class="example-card" data-query="What is the lock-in period for HDFC ELSS Tax Saver?">
+            "What is the lock-in period for HDFC ELSS Tax Saver?"
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <div class="last-updated">
+          <span class="pulse-dot"></span>
+          <span id="lastUpdatedTimestamp">LAST UPDATED: TODAY, 09:45 AM</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-link">
+            <span>❔</span> Help
+          </div>
+          <div class="footer-link">
+            <span>⚙️</span> Settings
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Canvas -->
+    <main class="main-canvas">
+      
+
+
+      <!-- Scrollable Chat Stream Area -->
+      <div class="chat-viewport" id="chatViewport">
+        
+        <!-- Empty Hero State (visible by default) -->
+        <div class="empty-hero" id="emptyHero">
+          <div class="sparkle-box">✦</div>
+          <h2 class="hero-title">Grow RAG: <span class="hero-highlight">Facts-Only Assistant</span></h2>
+          <p class="hero-description">
+            Instantly query verified documents for listed HDFC schemes. I synthesize complex financial data into concise, accurate answers.
+          </p>
+          <div class="compliance-badge">
+            <span class="shield-icon">🛡️</span>
+            <span>Facts-only. No investment advice.</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Messages Container -->
+        <div class="messages-container" id="messagesContainer" style="display: none;">
+          <div class="date-separator">
+            <span>Today</span>
+          </div>
+          <div id="messagesList"></div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Chat Input Area -->
+      <footer class="input-footer">
+        <form class="input-form" id="chatForm">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="queryInput" 
+              class="query-input" 
+              placeholder="Ask a factual question about listed HDFC schemes..." 
+              autocomplete="off"
+            />
+            <button type="submit" class="send-btn" id="sendBtn" title="Send query">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <p class="input-disclaimer">
+          Information is retrieved from the most recent official scheme documents. Verify critical data.
+        </p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

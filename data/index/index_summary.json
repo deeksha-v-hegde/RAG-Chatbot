@@ -1,0 +1,12 @@
+{
+  "total_schemes": 5,
+  "total_chunks": 30,
+  "chunks_per_scheme": 6,
+  "vocab_size": 336,
+  "embedding_type": "TF-IDF Sublinear N-gram Vectors (Local)",
+  "index_files": [
+    "chunks.json",
+    "vectorizer.pkl",
+    "tfidf_matrix.npy"
+  ]
+}

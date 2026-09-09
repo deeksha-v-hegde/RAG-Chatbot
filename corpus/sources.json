@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "amc": "HDFC Mutual Fund",
+  "platform": "Groww",
+  "description": "Strict source whitelist registry for HDFC mutual fund schemes",
+  "created_at": "2026-09-09",
+  "total_schemes": 5,
+  "schemes": [
+    {
+      "scheme_id": "hdfc_mid_cap",
+      "canonical_name": "HDFC Mid-Cap Opportunities Fund",
+      "plan_type": "Direct Plan - Growth Option",
+      "category": "Equity - Mid Cap",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+      "citation_title": "Groww - HDFC Mid-Cap Opportunities Fund Direct-Growth",
+      "expected_metrics": [
+        "expense_ratio",
+        "exit_load",
+        "min_sip",
+        "riskometer",
+        "benchmark"
+      ],
+      "aliases": [
+        "hdfc mid cap",
+        "hdfc midcap",
+        "hdfc mid-cap opportunities",
+        "mid cap fund",
+        "midcap"
+      ]
+    },
+    {
+      "scheme_id": "hdfc_flexi_cap",
+      "canonical_name": "HDFC Flexi Cap Fund",
+      "plan_type": "Direct Plan - Growth Option",
+      "category": "Equity - Flexi Cap",
+      "source_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth",
+      "citation_title": "Groww - HDFC Flexi Cap Fund Direct-Growth",
+      "expected_metrics": [
+        "expense_ratio",
+        "exit_load",
+        "min_sip",
+        "riskometer",
+        "benchmark"
+      ],
+      "aliases": [
+        "hdfc flexi cap",
+        "hdfc flexicap",
+        "hdfc equity fund",
+        "flexi cap fund",
+        "flexicap"
+      ]
+    },
+    {
+      "scheme_id": "hdfc_focused",
+      "canonical_name": "HDFC Focused 30 Fund",
+      "plan_type": "Direct Plan - Growth Option",
+      "category": "Equity - Focused",
+      "source_url": "https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth",
+      "citation_title": "Groww - HDFC Focused 30 Fund Direct-Growth",
+      "expected_metrics": [
+        "expense_ratio",
+        "exit_load",
+        "min_sip",
+        "riskometer",
+        "benchmark"
+      ],
+      "aliases": [
+        "hdfc focused",
+        "hdfc focused 30",
+        "focused fund",
+        "focused 30"
+      ]
+    },
+    {
+      "scheme_id": "hdfc_elss",
+      "canonical_name": "HDFC ELSS Tax Saver Fund",
+      "plan_type": "Direct Plan - Growth Option",
+      "category": "Equity - ELSS",
+      "source_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+      "citation_title": "Groww - HDFC ELSS Tax Saver Fund Direct-Growth",
+      "expected_metrics": [
+        "expense_ratio",
+        "exit_load",
+        "min_sip",
+        "riskometer",
+        "benchmark",
+        "lock_in"
+      ],
+      "statutory_lock_in_years": 3,
+      "aliases": [
+        "hdfc elss",
+        "hdfc tax saver",
+        "hdfc taxsaver",
+        "tax saver fund",
+        "elss fund",
+        "tax saver"
+      ]
+    },
+    {
+      "scheme_id": "hdfc_large_cap",
+      "canonical_name": "HDFC Top 100 Fund",
+      "plan_type": "Direct Plan - Growth Option",
+      "category": "Equity - Large Cap",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_title": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "expected_metrics": [
+        "expense_ratio",
+        "exit_load",
+        "min_sip",
+        "riskometer",
+        "benchmark"
+      ],
+      "aliases": [
+        "hdfc large cap",
+        "hdfc top 100",
+        "top 100 fund",
+        "large cap fund",
+        "top 100"
+      ]
+    }
+  ]
+}

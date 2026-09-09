@@ -1,0 +1,30 @@
+{
+  "scheme_id": "hdfc_large_cap",
+  "scheme_name": "HDFC Large Cap Fund Direct Growth",
+  "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+  "category": "Equity",
+  "sub_category": "Large Cap",
+  "plan_type": "Direct",
+  "expense_ratio": "1.02%",
+  "expense_ratio_val": 1.02,
+  "exit_load": "Exit load of 1% if redeemed within 1 year",
+  "min_sip": "₹100",
+  "min_sip_val": 100,
+  "min_lumpsum": "₹100",
+  "min_lumpsum_val": 100,
+  "riskometer": "Moderately High",
+  "benchmark": "NIFTY 100 Total Return Index",
+  "lock_in": "Nil (No lock-in period)",
+  "lock_in_years": null,
+  "fund_managers": "Prashant Jain",
+  "launch_date": "01-Jan-2013",
+  "tax_implications": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+  "fund_description": "The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies.",
+  "stamp_duty": "0.005% (from July 1st, 2020)%",
+  "last_updated": "2026-09-09",
+  "raw_sections": {
+    "allotment_date": "2013-01-01",
+    "aum": 40197.8895,
+    "isin": "INF179K01YV8"
+  }
+}

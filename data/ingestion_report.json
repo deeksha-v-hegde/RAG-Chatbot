@@ -1,0 +1,86 @@
+{
+  "report_name": "Phase 1 Ingestion Integrity & Compliance Audit",
+  "generated_at_utc": "2026-09-09T06:08:09.509484+00:00",
+  "status": "PASSED",
+  "total_schemes_expected": 5,
+  "total_schemes_verified": 5,
+  "all_checks_passed": true,
+  "summary_errors": [],
+  "schemes": [
+    {
+      "scheme_id": "hdfc_mid_cap",
+      "scheme_name": "HDFC Mid-Cap Opportunities Fund",
+      "status": "PASS",
+      "errors": [],
+      "checks_passed_count": 15,
+      "sample_metrics": {
+        "ter": "0.74%",
+        "exit_load": "Exit load of 1% if redeemed within 1 year.",
+        "min_sip": "₹100",
+        "riskometer": "Moderately High",
+        "benchmark": "NIFTY Midcap 150 Total Return Index",
+        "lock_in": "Nil (No lock-in period)"
+      }
+    },
+    {
+      "scheme_id": "hdfc_flexi_cap",
+      "scheme_name": "HDFC Flexi Cap Fund",
+      "status": "PASS",
+      "errors": [],
+      "checks_passed_count": 15,
+      "sample_metrics": {
+        "ter": "0.77%",
+        "exit_load": "Exit load of 1% if redeemed within 1 year",
+        "min_sip": "₹100",
+        "riskometer": "Moderately High",
+        "benchmark": "NIFTY 500 Total Return Index",
+        "lock_in": "Nil (No lock-in period)"
+      }
+    },
+    {
+      "scheme_id": "hdfc_focused",
+      "scheme_name": "HDFC Focused 30 Fund",
+      "status": "PASS",
+      "errors": [],
+      "checks_passed_count": 15,
+      "sample_metrics": {
+        "ter": "0.80%",
+        "exit_load": "Exit load of 1% if redeemed within 1 year",
+        "min_sip": "₹100",
+        "riskometer": "Moderately High",
+        "benchmark": "NIFTY 500 Total Return Index",
+        "lock_in": "Nil (No lock-in period)"
+      }
+    },
+    {
+      "scheme_id": "hdfc_elss",
+      "scheme_name": "HDFC ELSS Tax Saver Fund",
+      "status": "PASS",
+      "errors": [],
+      "checks_passed_count": 16,
+      "sample_metrics": {
+        "ter": "1.19%",
+        "exit_load": "Nil",
+        "min_sip": "₹500",
+        "riskometer": "Moderately High",
+        "benchmark": "NIFTY 500 Total Return Index",
+        "lock_in": "3 Years statutory lock-in"
+      }
+    },
+    {
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund",
+      "status": "PASS",
+      "errors": [],
+      "checks_passed_count": 15,
+      "sample_metrics": {
+        "ter": "1.02%",
+        "exit_load": "Exit load of 1% if redeemed within 1 year",
+        "min_sip": "₹100",
+        "riskometer": "Moderately High",
+        "benchmark": "NIFTY 100 Total Return Index",
+        "lock_in": "Nil (No lock-in period)"
+      }
+    }
+  ]
+}

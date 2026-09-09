@@ -1,0 +1,93 @@
+{
+  "scheme_id": "hdfc_large_cap",
+  "scheme_name": "HDFC Large Cap Fund Direct Growth",
+  "canonical_name": "HDFC Top 100 Fund",
+  "category": "Equity",
+  "sub_category": "Large Cap",
+  "plan_type": "Direct Plan - Growth Option",
+  "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+  "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+  "doc_type": "Scheme Overview",
+  "last_updated": "2026-09-09",
+  "sections": {
+    "expense_ratio": "1.02%",
+    "expense_ratio_val": 1.02,
+    "exit_load": "Exit load of 1% if redeemed within 1 year",
+    "min_sip": "₹100",
+    "min_sip_val": 100,
+    "min_lumpsum": "₹100",
+    "min_lumpsum_val": 100,
+    "riskometer": "Moderately High",
+    "benchmark": "NIFTY 100 Total Return Index",
+    "lock_in": "Nil (No lock-in period)",
+    "lock_in_years": null,
+    "fund_managers": "Prashant Jain",
+    "launch_date": "01-Jan-2013",
+    "tax_implications": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+    "fund_description": "The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies.",
+    "stamp_duty": "0.005% (from July 1st, 2020)%"
+  },
+  "structured_chunks": [
+    {
+      "chunk_id": "hdfc_large_cap_ter",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "expense_ratio",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Expense Ratio]\nThe Expense Ratio (Total Expense Ratio / TER) for HDFC Top 100 Fund Direct-Growth is 1.02%. This fee is charged annually by HDFC Mutual Fund for managing the fund.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    },
+    {
+      "chunk_id": "hdfc_large_cap_exit_load",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "exit_load",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Exit Load]\nThe exit load for HDFC Top 100 Fund is: Exit load of 1% if redeemed within 1 year. An exit load is the fee deducted if units are redeemed before the specified period.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    },
+    {
+      "chunk_id": "hdfc_large_cap_investment_limits",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "investment_limits",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Minimum Investment Limits]\nFor HDFC Top 100 Fund (Direct Plan - Growth Option), the minimum SIP (Systematic Investment Plan) amount is ₹100. The minimum initial lumpsum investment amount is ₹100.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    },
+    {
+      "chunk_id": "hdfc_large_cap_risk_benchmark",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "riskometer_and_benchmark",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Riskometer & Benchmark]\nThe official SEBI Riskometer rating for HDFC Top 100 Fund is 'Moderately High'. The underlying benchmark index against which performance is measured is 'NIFTY 100 Total Return Index'.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    },
+    {
+      "chunk_id": "hdfc_large_cap_lock_in",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "lock_in_period",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Lock-in Period]\nHDFC Top 100 Fund has no lock-in period (Nil (No lock-in period)). Investors can redeem their units at any time, subject to applicable exit load and taxes.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    },
+    {
+      "chunk_id": "hdfc_large_cap_overview",
+      "scheme_id": "hdfc_large_cap",
+      "scheme_name": "HDFC Top 100 Fund (Direct Plan - Growth Option)",
+      "topic": "overview_and_tax",
+      "text": "[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Fund Management & Overview]\nHDFC Top 100 Fund was launched on 01-Jan-2013 and is managed by Prashant Jain. Objective: The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies. Tax rules: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%. Stamp duty: 0.005% (from July 1st, 2020)%.",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "citation_label": "Groww - HDFC Top 100 Fund Direct-Growth",
+      "last_updated": "2026-09-09"
+    }
+  ],
+  "full_markdown": "# Scheme Document: HDFC Top 100 Fund\n\n- **Scheme ID:** `hdfc_large_cap`\n- **Category:** Equity (Large Cap)\n- **Plan Type:** Direct Plan - Growth Option\n- **Official Source URL:** [Groww - HDFC Top 100 Fund Direct-Growth](https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth)\n- **Document Type:** Scheme Overview\n- **Last Updated:** 2026-09-09\n\n## 1. Key Factual Metrics\n\n| Metric | Value | Description |\n| :--- | :--- | :--- |\n| **Expense Ratio (TER)** | 1.02% | Annual management fee percentage |\n| **Exit Load** | Exit load of 1% if redeemed within 1 year | Penalty on early redemption |\n| **Minimum SIP** | ₹100 | Minimum monthly SIP amount |\n| **Minimum Lumpsum** | ₹100 | Minimum initial investment |\n| **Riskometer** | Moderately High | Official SEBI risk classification |\n| **Benchmark** | NIFTY 100 Total Return Index | Reference index benchmark |\n| **Lock-in Period** | Nil (No lock-in period) | Statutory lock-in duration |\n| **Fund Manager** | Prashant Jain | Portfolio manager |\n| **Launch Date** | 01-Jan-2013 | Inception / launch date |\n| **Stamp Duty** | 0.005% (from July 1st, 2020)% | Regulatory stamp duty |\n\n## 2. Tax Implications & Notes\n> If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.\n\n## 3. Atomic Semantic Chunks for Indexing\n\n### Chunk `hdfc_large_cap_ter` (`expense_ratio`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Expense Ratio]\nThe Expense Ratio (Total Expense Ratio / TER) for HDFC Top 100 Fund Direct-Growth is 1.02%. This fee is charged annually by HDFC Mutual Fund for managing the fund.\n```\n\n### Chunk `hdfc_large_cap_exit_load` (`exit_load`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Exit Load]\nThe exit load for HDFC Top 100 Fund is: Exit load of 1% if redeemed within 1 year. An exit load is the fee deducted if units are redeemed before the specified period.\n```\n\n### Chunk `hdfc_large_cap_investment_limits` (`investment_limits`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Minimum Investment Limits]\nFor HDFC Top 100 Fund (Direct Plan - Growth Option), the minimum SIP (Systematic Investment Plan) amount is ₹100. The minimum initial lumpsum investment amount is ₹100.\n```\n\n### Chunk `hdfc_large_cap_risk_benchmark` (`riskometer_and_benchmark`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Riskometer & Benchmark]\nThe official SEBI Riskometer rating for HDFC Top 100 Fund is 'Moderately High'. The underlying benchmark index against which performance is measured is 'NIFTY 100 Total Return Index'.\n```\n\n### Chunk `hdfc_large_cap_lock_in` (`lock_in_period`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Lock-in Period]\nHDFC Top 100 Fund has no lock-in period (Nil (No lock-in period)). Investors can redeem their units at any time, subject to applicable exit load and taxes.\n```\n\n### Chunk `hdfc_large_cap_overview` (`overview_and_tax`)\n```text\n[Scheme: HDFC Top 100 Fund (Direct Plan - Growth Option) | Topic: Fund Management & Overview]\nHDFC Top 100 Fund was launched on 01-Jan-2013 and is managed by Prashant Jain. Objective: The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies. Tax rules: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%. Stamp duty: 0.005% (from July 1st, 2020)%.\n```\n"
+}
