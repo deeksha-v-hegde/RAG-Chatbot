@@ -92,8 +92,12 @@ class SchemeRetriever:
         query_lower = query.lower()
         for topic, keywords in TOPIC_KEYWORDS.items():
             for kw in keywords:
-                if kw in query_lower:
-                    return topic
+                if len(kw) <= 4:
+                    if re.search(rf"\b{re.escape(kw)}\b", query_lower):
+                        return topic
+                else:
+                    if kw in query_lower:
+                        return topic
         return None
 
     def retrieve(self, query: str, top_k: int = 1) -> RetrievalResult:
@@ -189,7 +193,7 @@ class SchemeRetriever:
             if any(k in query_lower for k in ["exit load", "penalty", "redeem", "redemption"]):
                 if chunk_topic == "exit_load":
                     s += 0.60
-            if any(k in query_lower for k in ["expense", "ter", "management fee", "charges", "annual fee"]):
+            if any(k in query_lower for k in ["expense", "management fee", "charges", "annual fee"]) or re.search(r"\bter\b", query_lower):
                 if chunk_topic == "expense_ratio":
                     s += 0.60
             if any(k in query_lower for k in ["lock in", "lock-in", "lockin"]):

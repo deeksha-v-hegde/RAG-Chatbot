@@ -29,7 +29,7 @@ def main():
         indexer = SchemeChunkIndexer()
         indexer.build_index()
         indexer.save_index()
-        print("✓ Index build complete.")
+        print("[SUCCESS] Index build complete.")
 
     if args.query:
         print(f"\n>>> Executing Retrieval for query: '{args.query}'")
