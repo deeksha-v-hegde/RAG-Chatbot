@@ -351,25 +351,65 @@ Before displaying the response to the user:
 
 ---
 
-## 3. Technology Stack Summary
+## 3. Automated Data Freshness & Corpus Scheduler (GitHub Actions Architecture)
 
-| Layer | Component | Selected Technology / Tool |
-| :--- | :--- | :--- |
-| **Ingestion** | Web/Document Scraper & Parser | `pdfplumber`, `BeautifulSoup4`, `trafilatura` |
-| **Vector Storage** | Local Vector DB & Index | `ChromaDB` / `FAISS` |
-| **Embeddings** | Semantic Representation | `text-embedding-3-small` or local `bge-small-en-v1.5` |
-| **Orchestration** | RAG Pipeline & Chains | LangChain / LlamaIndex / Lightweight Custom Python Orchestrator |
-| **LLM Inference** | Response Synthesizer | **Groq API** (`llama-3.3-70b-versatile` / `llama-3.1-8b-instant`) |
-| **Backend API** | Serving Endpoint | `FastAPI` (Python 3.10+) |
-| **Frontend UI** | Clean, Minimal Web Client | Modern Vanilla HTML/CSS/JS (Groww aesthetics) |
+To ensure the Mutual Fund FAQ Assistant always operates on current regulatory figures (such as newly revised Total Expense Ratios, adjusted Exit Load schedules, or scheme categorization updates) without requiring manual developer maintenance, the architecture includes an **Automated Data Freshness Pipeline** powered by **GitHub Actions** (`.github/workflows/data_freshness.yml`).
+
+### Scheduled Ingestion Workflow Architecture
+
+```mermaid
+flowchart LR
+    Cron["GitHub Actions Cron Schedule (Daily 02:00 UTC)"] --> Runner["Ephemeral Ubuntu Runner"]
+    Manual["Manual Dispatch (workflow_dispatch)"] --> Runner
+    
+    subgraph Ingestion_Job ["Automated Execution"]
+        Runner --> Fetch["Phase 1: Force-Refresh Scraper (phase1/run_ingestion.py)"]
+        Fetch --> Parse["Extract & Normalize Official Groww Disclosures"]
+        Parse --> Index["Phase 2: Rebuild Vector Index (phase2/run_phase2.py)"]
+        Index --> Tests["Run Integrity Smoke Tests (Registry, Indexer, Retriever)"]
+    end
+
+    subgraph Sync_Job ["Version Control & Deployment Sync"]
+        Tests --> Diff{"Diff Detected in data/ ?"}
+        Diff -- "Yes" --> Commit["Commit & Push to origin/main [skip ci]"]
+        Diff -- "No" --> Done["No-op: Corpus Already Fresh"]
+        Commit --> StreamlitCloud["Streamlit Community Cloud Auto-Redeploy"]
+    end
+```
+
+### Key Workflow Capabilities:
+1. **Deterministic Daily Schedule**:
+   - Executes automatically via `schedule.cron: '0 2 * * *'` (02:00 UTC / 07:30 AM IST), ensuring the corpus is refreshed before morning trading hours.
+2. **On-Demand Manual Trigger**:
+   - Supports `workflow_dispatch` for instant administrative data syncs when AMCs announce statutory scheme changes or KIM/SID revisions.
+3. **Automated Diff Detection & Safe Commit**:
+   - Evaluates `git status -s data/` after scraping and re-indexing.
+   - If official disclosures have changed, the action automatically commits updated atomic chunks (`data/index/chunks.json`) and vector files (`data/index/tfidf_matrix.npy`, `data/index/vectorizer.pkl`) with a `[skip ci]` tag.
+4. **Seamless Continuous Deployment (CD)**:
+   - Pushing the updated `data/index/` and processed documents to `origin/main` automatically triggers a zero-downtime hot-reload on Streamlit Community Cloud, keeping production answers synchronized with verified disclosures.
 
 ---
 
-## 4. Next Implementation Steps
+## 4. Technology Stack Summary
 
-1. **Step 1:** Ingest and index the 5 designated HDFC scheme URLs on Groww into `corpus/sources.json` and local vector database.
-2. **Step 2:** Implement the ingestion script to scrape, parse, and structure documents with metadata.
-3. **Step 3:** Implement vector store embedding and chunk indexing.
-4. **Step 4:** Build the query router with the PII filter and advisory refusal guardrails.
-5. **Step 5:** Connect the LLM generator with strict template validation.
-6. **Step 6:** Build and test the minimal UI with example questions and compliance disclaimers.
+| Layer | Component | Selected Technology / Tool |
+| :--- | :--- | :--- |
+| **Ingestion** | Web/Document Scraper & Parser | `BeautifulSoup4`, `requests`, `html.parser` |
+| **Vector Storage** | Local Vector DB & Index | `scikit-learn` TF-IDF + Cosine Similarity Matrix, JSON Store |
+| **Orchestration** | RAG Pipeline & Chains | Custom Defense-in-Depth Python Synthesizer |
+| **LLM Inference** | Response Synthesizer | **Groq Cloud API** (`openai/gpt-oss-120b` / `llama-3.3-70b-versatile`) |
+| **Scheduler & CI/CD**| Automated Daily Ingestion & Corpus Sync | **GitHub Actions** (`.github/workflows/data_freshness.yml`) |
+| **Backend API** | Serving Endpoint | `FastAPI` (Python 3.10+) |
+| **Frontend UI** | Interactive Web Client | **Streamlit** (Grow RAG dark theme) & Vanilla HTML/CSS/JS |
+
+---
+
+## 5. Summary of Completed Phases
+
+1. **Phase 1: Ingestion & Validation** - Scrapes 5 official Groww scheme disclosures, parses key tables, and validates data integrity.
+2. **Phase 2: Chunking & Retrieval** - Decomposes schemes into 30 atomic chunks with intent-aware keyword score boosting.
+3. **Phase 3: Guardrails & Refusal** - Upstream non-advisory filter, PII sanitizer, and compliance boundary enforcement.
+4. **Phase 4: Synthesis & Validation** - Grounded Groq inference, multi-line bullet structuring, and strict Zero-URL defense for unknowns.
+5. **Phase 5: User Interface** - High-fidelity "Grow RAG" dark theme Streamlit app and FastAPI web app.
+6. **Phase 6: Evaluation & Verification** - 100% pass rate on test benchmark suite across factual, refusal, and PII test cases.
+7. **Automated Freshness** - GitHub Actions workflow for daily recurring cron re-ingestion and index deployment.

@@ -1,0 +1,62 @@
+name: Scheduled Data Freshness & Corpus Re-indexing
+
+on:
+  schedule:
+    # Run daily at 02:00 UTC (07:30 AM IST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allows manual trigger anytime from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-and-reindex:
+    name: Ingest Latest Disclosures & Rebuild Index
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Project Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Phase 1 Ingestion Pipeline (Scrape & Normalize)
+        run: |
+          python phase1/run_ingestion.py --force-refresh
+
+      - name: Run Phase 2 Indexing Pipeline (Chunk & Vectorize)
+        run: |
+          python phase2/run_phase2.py --build-index
+
+      - name: Run Verification Smoke Tests
+        run: |
+          python phase1/phase1.1/test_registry.py
+          python phase2/test_indexer.py
+          python phase2/test_retriever.py
+
+      - name: Commit and Push Updated Corpus if Changes Detected
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions [Bot]"
+          
+          # Check if data files or indices have changed
+          if [[ -n $(git status -s data/) ]]; then
+            echo "Changes detected in data/ corpus. Committing and pushing updates..."
+            git add data/
+            git commit -m "chore(data): automated daily refresh of mutual fund corpus and index [skip ci]"
+            git push origin main
+          else
+            echo "No changes in data disclosures. Corpus is already fresh."
+          fi
