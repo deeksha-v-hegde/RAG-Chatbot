@@ -5,8 +5,8 @@
   "category": "Equity",
   "sub_category": "Flexi Cap",
   "plan_type": "Direct",
-  "expense_ratio": "0.80%",
-  "expense_ratio_val": 0.8,
+  "expense_ratio": "0.81%",
+  "expense_ratio_val": 0.81,
   "exit_load": "Exit load of 1% if redeemed within 1 year",
   "min_sip": "₹100",
   "min_sip_val": 100,
@@ -24,7 +24,7 @@
   "last_updated": "2026-09-09",
   "raw_sections": {
     "allotment_date": "2013-01-01",
-    "aum": 27924.7767,
+    "aum": 28200.6664,
     "isin": "INF179K01VK7"
   }
 }

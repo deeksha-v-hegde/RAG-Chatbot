@@ -5,8 +5,8 @@
   "category": "Equity",
   "sub_category": "Mid Cap",
   "plan_type": "Direct",
-  "expense_ratio": "0.74%",
-  "expense_ratio_val": 0.74,
+  "expense_ratio": "0.75%",
+  "expense_ratio_val": 0.75,
   "exit_load": "Exit load of 1% if redeemed within 1 year.",
   "min_sip": "₹100",
   "min_sip_val": 100,
@@ -24,7 +24,7 @@
   "last_updated": "2026-09-09",
   "raw_sections": {
     "allotment_date": "2013-01-01",
-    "aum": 105142.6943,
+    "aum": 108324.5467,
     "isin": "INF179K01XQ0"
   }
 }
