@@ -11,7 +11,7 @@
 
 | Metric | Value | Description |
 | :--- | :--- | :--- |
-| **Expense Ratio (TER)** | 1.20% | Annual management fee percentage |
+| **Expense Ratio (TER)** | 1.21% | Annual management fee percentage |
 | **Exit Load** | Nil | Penalty on early redemption |
 | **Minimum SIP** | ₹500 | Minimum monthly SIP amount |
 | **Minimum Lumpsum** | ₹500 | Minimum initial investment |
@@ -30,7 +30,7 @@
 ### Chunk `hdfc_elss_ter` (`expense_ratio`)
 ```text
 [Scheme: HDFC ELSS Tax Saver Fund (Direct Plan - Growth Option) | Topic: Expense Ratio]
-The Expense Ratio (Total Expense Ratio / TER) for HDFC ELSS Tax Saver Fund Direct-Growth is 1.20%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
+The Expense Ratio (Total Expense Ratio / TER) for HDFC ELSS Tax Saver Fund Direct-Growth is 1.21%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
 ```
 
 ### Chunk `hdfc_elss_exit_load` (`exit_load`)

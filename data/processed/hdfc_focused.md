@@ -11,7 +11,7 @@
 
 | Metric | Value | Description |
 | :--- | :--- | :--- |
-| **Expense Ratio (TER)** | 0.81% | Annual management fee percentage |
+| **Expense Ratio (TER)** | 0.82% | Annual management fee percentage |
 | **Exit Load** | Exit load of 1% if redeemed within 1 year | Penalty on early redemption |
 | **Minimum SIP** | ₹100 | Minimum monthly SIP amount |
 | **Minimum Lumpsum** | ₹100 | Minimum initial investment |
@@ -30,7 +30,7 @@
 ### Chunk `hdfc_focused_ter` (`expense_ratio`)
 ```text
 [Scheme: HDFC Focused 30 Fund (Direct Plan - Growth Option) | Topic: Expense Ratio]
-The Expense Ratio (Total Expense Ratio / TER) for HDFC Focused 30 Fund Direct-Growth is 0.81%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
+The Expense Ratio (Total Expense Ratio / TER) for HDFC Focused 30 Fund Direct-Growth is 0.82%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
 ```
 
 ### Chunk `hdfc_focused_exit_load` (`exit_load`)

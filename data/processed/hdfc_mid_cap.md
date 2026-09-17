@@ -11,7 +11,7 @@
 
 | Metric | Value | Description |
 | :--- | :--- | :--- |
-| **Expense Ratio (TER)** | 0.75% | Annual management fee percentage |
+| **Expense Ratio (TER)** | 0.76% | Annual management fee percentage |
 | **Exit Load** | Exit load of 1% if redeemed within 1 year. | Penalty on early redemption |
 | **Minimum SIP** | ₹100 | Minimum monthly SIP amount |
 | **Minimum Lumpsum** | ₹100 | Minimum initial investment |
@@ -30,7 +30,7 @@
 ### Chunk `hdfc_mid_cap_ter` (`expense_ratio`)
 ```text
 [Scheme: HDFC Mid-Cap Opportunities Fund (Direct Plan - Growth Option) | Topic: Expense Ratio]
-The Expense Ratio (Total Expense Ratio / TER) for HDFC Mid-Cap Opportunities Fund Direct-Growth is 0.75%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
+The Expense Ratio (Total Expense Ratio / TER) for HDFC Mid-Cap Opportunities Fund Direct-Growth is 0.76%. This fee is charged annually by HDFC Mutual Fund for managing the fund.
 ```
 
 ### Chunk `hdfc_mid_cap_exit_load` (`exit_load`)
