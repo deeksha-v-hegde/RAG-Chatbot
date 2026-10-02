@@ -1,6 +1,6 @@
 {
   "report_name": "Phase 1 Ingestion Integrity & Compliance Audit",
-  "generated_at_utc": "2026-10-01T11:07:19.069474+00:00",
+  "generated_at_utc": "2026-10-02T10:40:57.710813+00:00",
   "status": "PASSED",
   "total_schemes_expected": 5,
   "total_schemes_verified": 5,
@@ -74,7 +74,7 @@
       "errors": [],
       "checks_passed_count": 15,
       "sample_metrics": {
-        "ter": "1.03%",
+        "ter": "1.04%",
         "exit_load": "Exit load of 1% if redeemed within 1 year",
         "min_sip": "₹100",
         "riskometer": "Moderately High",
