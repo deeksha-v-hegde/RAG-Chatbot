@@ -1,7 +1,7 @@
 # Scheme Document: HDFC Focused 30 Fund
 
 - **Scheme ID:** `hdfc_focused`
-- **Category:** Equity (Flexi Cap)
+- **Category:** Equity (Focused)
 - **Plan Type:** Direct Plan - Growth Option
 - **Official Source URL:** [Groww - HDFC Focused 30 Fund Direct-Growth](https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth)
 - **Document Type:** Scheme Overview
